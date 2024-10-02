@@ -1,0 +1,26 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    text-align: center;
+}
+.form{
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #007bff;
+    transition: border-color 0.3s;
+    outline: none;
+}
+form::placeholder{
+    color:#aaa;
+}
+form:focus{
+    border-color: #0056b3;
+}
