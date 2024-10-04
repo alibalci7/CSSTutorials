@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>INPUT RANGE DESIGN</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Choose Your Value</h1>
+            <input type="range" min="0" max="100" value="50"
+                id="rangeInput" class="custom-range" />
+            <p>Value:<span id="rangeValue"></span></p>
+        </div>
+
+        <script>
+            const rangeInput = document.getElementById("rangeInput");
+            const rangeValue = document.getElementById("rangeValue");
+
+            rangeInput.addEventListener("input", function(){
+                rangeValue.textContent = this.value;
+            });
+        </script>
+    </body>
+</html>
