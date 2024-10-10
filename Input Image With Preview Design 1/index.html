@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>IMAGE DESIGN WITH PREVIEW</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Profile Image</h1>
+            <div class="image-upload">
+                <input type="file" id="file-input" accept="image/*"
+                 onchange="previewImage()" />
+                 <label for="file-input">Choose Image</label>
+            </div>
+            <div class="image-preview">
+                <img id="preview" src="" alt="preview" />
+            </div>
+        </div>
+
+        <script>
+            function previewImage(){
+                const input = document.getElementById("file-input");
+                const preview = document.getElementById("preview");
+                const imagePreview = document.getElementById("image-preview");
+
+                const file = input.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function(e){
+                    preview.src = e.target.result;
+                    imagePreview.style.display = "block";
+                }
+
+                if(file){
+                    reader.readAsDataURL(file);
+                }
+            }
+        </script>
+    </body>
+</html>
