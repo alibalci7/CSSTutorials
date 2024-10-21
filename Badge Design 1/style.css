@@ -1,0 +1,42 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container{
+    display: flex;
+    gap: 10px;
+}
+
+.badge{
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.badge-new{
+    background-color: #007bff;
+}
+
+.badge-success{
+    background-color: #28a745;
+}
+
+.badge-warning{
+    background-color: #ffc107;
+}
+
+.badge-danger{
+    background-color: #dc3545;
+}
+
+.badge:hover{
+    opacity: 0.8;
+}
