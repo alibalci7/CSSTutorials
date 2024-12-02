@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Counter-up Design</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="counter">
+                <span id="count">0</span>
+                <p>Total Users</p>
+            </div>
+        </div>
+
+        <script>
+            let count=0;
+            const target=100;
+            const increment =1;
+            const interval = setInterval(function(){
+                count+=increment;
+                document.getElementById("count").innerText = Math.min(count, target);
+                if(count >= target){
+                    clearInterval(interval);
+                }
+            }, 50);
+        </script>
+    </body>
+</html>

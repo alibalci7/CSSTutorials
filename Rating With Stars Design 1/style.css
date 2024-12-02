@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.rating{
+    direction: rtl;
+}
+
+.rating input{
+    display: none;
+}
+
+.star{
+    font-size: 40px;
+    color: #ccc;
+    cursor: pointer;
+    transition:  color 0.2s;
+}
+
+.rating input:checked ~ .star{
+    color: #f39c12;
+}
+
+.rating input:hover ~ .star,
+.rating input:hover{
+    color: #f39c12;
+}
+
+.rating input:checked + .star{
+    color: #f39c12;
+}

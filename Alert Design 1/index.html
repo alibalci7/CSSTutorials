@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Alert Design</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="alert">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-message">This is an alert message</span>
+            <button type="button" class="close-btn" onclick="closeAlert()">X</button>
+        </div>
+
+        <script>
+            function closeAlert(){
+                document.querySelector(".alert").style.display="none";
+            }
+        </script>
+    </body>
+</html>
