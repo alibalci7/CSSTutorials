@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Tab Panel Design</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="tab-container">
+            <div class="tabs">
+                <button class="tab active" onclick="openTab(event,'tab1')">Tab1</button>
+                <button class="tab" onclick="openTab(event,'tab2')">Tab2</button>
+                <button class="tab" onclick="openTab(event,'tab3')">Tab3</button>
+            </div>
+
+            <div id="tab1" class="tab-content active">
+                <h2>Tab1</h2>
+                <p>This is a tab1 content</p>
+            </div>
+
+            <div id="tab2" class="tab-content">
+                <h2>Tab2</h2>
+                <p>This is a tab2 content</p>
+            </div>
+
+            <div id="tab3" class="tab-content">
+                <h2>Tab3</h2>
+                <p>This is a tab3 content</p>
+            </div>
+        </div>
+
+        <script>
+            function openTab(event, tabName){
+                const tabs = document.querySelectorAll(".tab-content");
+                const tabButtons = document.querySelectorAll(".tab");
+
+                tabs.forEach(tab => {
+                    tab.classList.remove("active");
+                });
+
+                tabButtons.forEach(button => {
+                    button.classList.remove("active");
+                });
+
+                document.getElementById(tabName).classList.add("active");
+                event.currentTarget.classList.add("active");
+
+            }
+        </script>
+    </body>
+</html>
